@@ -9,6 +9,7 @@ class SearchBar extends Component {
 
         this.state = { term: '' };
         this.onInputChange = this.onInputChange.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
     onInputChange(event) {
@@ -40,8 +41,6 @@ class SearchBar extends Component {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ fetchWeather }, dispatch);
-}
+const mapDispatchToProps = dispatch => (bindActionCreators({ fetchWeather }, dispatch))
 
 export default connect(null, mapDispatchToProps)(SearchBar); // null because this component doesn't care about state
