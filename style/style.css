@@ -12,3 +12,9 @@ td {
     height: 200px;
 }
 
+body {
+    padding: 10% 10%;
+    margin: 0;
+    background-color: #f2f9e8 !important;
+}
+
